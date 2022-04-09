@@ -1,0 +1,144 @@
+body{
+    margin: 0px;
+    font-family: Inter;
+    font-size: 1vw;
+}
+
+.root{
+    width: 100vw;
+    height: 100vh;
+    background-color: #FBEECC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.root-home{
+    width: 100vw;
+    height: 100vh;
+    background-color: #FBEECC;
+}
+
+/* -------------------- LOGIN PAGE ---------------------*/
+
+#muj-logo-area{
+    background-image: url(Assets/muj-logo-nobg.png);
+    background-color: #FBEECC;
+    background-size: contain;
+    height: 200px;
+    width: 200px;   
+    border-radius: 50%;
+    position: absolute; 
+    margin-bottom: 500px;
+}
+
+#signup-login-area{
+    width: 35vw;
+    height: 60vh;
+    background-color: #f0c687;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px;
+    border-radius: 20px;   
+    padding-bottom: 20px;
+}
+
+.signup-login-increase-area{
+    padding-bottom: 50px !important;
+}
+
+#signup-login-area label{
+    font-size: 20px;
+}
+
+#signup-login-area input{
+    font-size: 15px;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    border-style: none; 
+}
+
+#signup-login-area button{
+    width: 100%;
+    font-weight: 900;
+    font-size: 15px;
+    margin-top: 30px; 
+    height: 40px;  
+    background-color: rgb(11, 197, 11);
+    border-style: none; 
+    border-radius: 10px;
+}
+
+#login-form{
+    margin-top: 100px;  
+}
+
+#signup-form{
+    margin-top: 150px;
+    position: absolute;
+    visibility: hidden;
+}
+
+#login-form, #signup-form a:hover{
+    cursor: pointer;
+}
+
+.hidden{
+    visibility: hidden !important;
+}
+
+.visible{
+    visibility: visible !important;
+}
+
+/* -------------------- NAV BAR ---------------------*/
+.navbar{
+    background-color: #f0c687;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 40px;
+}
+
+.navbar ul li{
+    margin-right: 50px;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    white-space: nowrap
+}
+
+.navbar ul li a{
+    color: black;
+    text-decoration: none;
+    padding-bottom: 4.2vh;
+}
+
+.active-link{
+    border-bottom: 2px solid black;
+}
+
+.logout-btn{
+    background-color: red;
+    border-color: red;
+    margin-left: 60vw;
+    font-weight: 900;
+    border-radius: 50px;
+}
+
+/* -------------------- CONTACT US ---------------------*/
+
+
+
+
+/* -------------------- PLACEMENT STATS ---------------------*/
+
+
+
+
+
+/* -------------------- PLACEMENT STATS ---------------------*/
