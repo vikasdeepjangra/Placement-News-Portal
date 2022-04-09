@@ -21,7 +21,7 @@
             </div>
 
             <div id="signup-login-area">
-                <form id="login-form">
+                <div id="login-form">
 
                     <label name="login-email-label" id="login-email-label" for="email">Email</label><br>
                     <input name="login-email" id="login-email" type="text" placeholder="Outlook Email Address">
@@ -33,7 +33,7 @@
 
                     <a name="create-account-btn"  id="create-account-btn" onClick="ShowSignUpForm()">CREATE AN ACCOUNT?</a>
 
-                </form>
+                </div>
 
                 <div id="signup-form">
 
@@ -63,8 +63,8 @@
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
-        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+        import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
@@ -127,13 +127,12 @@
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-
                     const dt = new Date();
                     update(ref(database, 'users/'  + user.uid),{
-                        last_login: dt,
+                        last_login: dt
                     })
 
-                    alert("User Logged In Successfully!");
+                    window.location.href = "Home/User/home-user-index.html";
                     // ...
                 })
                 .catch((error) => {
@@ -143,6 +142,20 @@
                     alert(errorMessage);
                 });
 
+        });
+
+
+        const user = auth.currentUser;
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/firebase.User
+                const uid = user.uid;
+                // ...
+            } else {
+                // User is signed out
+                // ...
+            }
         });
 
       </script>

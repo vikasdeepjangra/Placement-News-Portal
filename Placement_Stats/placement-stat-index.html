@@ -21,11 +21,80 @@
                     <li><a href="/Home/User/home-user-index.html">Home</a></li>
                     <li><a href="#" class="active-link">Placement Stats</a></li>
                     <li><a href="/Contact Us/contact-us-index.html">Contact Us</a></li>
-                    <li><button class="logout-btn">LOGOUT</button></li>
+                    <li><button id="logout-btn">LOGOUT</button></li>
                 </ul>    
-
             </div>
+
+            <div id="placement-chart-div">
+                <div id="placement-chart-img"></div>
+            </div>
+
+            <div id="placement-overview-div">
+                <table id="placement-overview-table">
+                    <tr>
+                        <th>Placement Overview</th>
+                        <th>Corporate Visits</th>
+                        <th>Average Package of B.Tech</th>
+                        <th>Dream Internship Stipend</th>
+                        <th>B. Tech Placement (%)</th>
+                    </tr>
+
+                    <tr>
+                        <td>2020-21</td>
+                        <td>110+</td>
+                        <td>INR 6.20 LPA</td>
+                        <td>INR 1.25 LPA</td>
+                        <td>94%</td>
+                    </tr>
+                </table>
+            </div>
+
         </div>
 
     </body>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCP8f5LRHjOeRKIiOg692KTwPtZYQ_Womc",
+          authDomain: "placement-news-portal-9ab86.firebaseapp.com",
+          databaseURL: "https://placement-news-portal-9ab86-default-rtdb.firebaseio.com",
+          projectId: "placement-news-portal-9ab86",
+          storageBucket: "placement-news-portal-9ab86.appspot.com",
+          messagingSenderId: "338105220281",
+          appId: "1:338105220281:web:248f7944fd7d9a6d8e6f68"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+
+        const logoutBtn = document.getElementById("logout-btn");
+
+        logoutBtn.addEventListener('click',(e)=>{
+
+        const auth = getAuth();
+        signOut(auth).then(() => {
+                // Sign-out successful.
+                window.location.href = "/index.html";
+        }).catch((error) => {
+                // An error happened.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+            });
+        });
+
+    
+    </script>
+
 </html>

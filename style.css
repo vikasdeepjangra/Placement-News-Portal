@@ -71,6 +71,10 @@ body{
     border-radius: 10px;
 }
 
+#login-btn:hover{
+    cursor: pointer;
+}
+
 #login-form{
     margin-top: 100px;  
 }
@@ -79,6 +83,10 @@ body{
     margin-top: 150px;
     position: absolute;
     visibility: hidden;
+}
+
+#signup-btn:hover{
+    cursor: pointer;
 }
 
 #login-form, #signup-form a:hover{
@@ -122,7 +130,7 @@ body{
     border-bottom: 2px solid black;
 }
 
-.logout-btn{
+#logout-btn{
     background-color: red;
     border-color: red;
     margin-left: 60vw;
@@ -130,8 +138,42 @@ body{
     border-radius: 50px;
 }
 
+#logout-btn:hover{
+    cursor: pointer;
+}
+
 /* -------------------- CONTACT US ---------------------*/
 
+#placement-chart-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;   
+    background-size: contain;
+}
+
+#placement-chart-img{
+    background-image: url("Assets/placement-chart-img.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+#placement-overview-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#placement-overview-table{
+    border-collapse: collapse;
+}
+
+#placement-overview-table table, th, td{
+    border: 2px solid;
+    text-align: center;
+    padding: 10px;  
+}
 
 
 
