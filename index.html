@@ -132,7 +132,12 @@
                         last_login: dt
                     })
 
-                    window.location.href = "Home/User/home-user-index.html";
+                    if(email === "admin@muj.manipal.edu"){
+                        window.location.href = "Home/Admin/home-admin-index.html";
+                    }
+                    else{
+                        window.location.href = "Home/User/home-user-index.html";
+                    }
                     // ...
                 })
                 .catch((error) => {

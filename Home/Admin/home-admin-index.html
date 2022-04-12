@@ -4,7 +4,7 @@
         <!-- STYLESHEETS -->    
             <link rel="stylesheet" type="text/css" href="/style.css">
         <!-- JAVASCRIPT -->    
-            <script src="script.js"></script>
+            <script src="home-user-script.js"></script>
         <!-- FAVICON -->    
             <link rel="icon" type="image/x-icon" href="/Assets/muj-logo-nobg.png">
         <!-- FONT FAMILY -->
@@ -18,37 +18,17 @@
         <div class="root-home">
             <div class="navbar">
                 <ul>
-                    <li><a href="/Home/User/home-user-index.html">Home</a></li>
-                    <li><a href="#" class="active-link">Placement Stats</a></li>
+                    <li><a href="#" class="active-link">Home</a></li>
+                    <li><a href="/Placement_Stats/placement-stat-index.html">Placement Stats</a></li>
                     <li><a href="/Contact Us/contact-us-index.html">Contact Us</a></li>
+                    <li><><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" fill="black" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                      </svg></li>
                     <li><button id="logout-btn">LOGOUT</button></li>
-                </ul>    
+
+                </ul>   
+
             </div>
-
-            <div id="placement-chart-img">
-                <img src="/Assets/placement-chart-img.png">
-            </div>
-
-            <div id="placement-overview-div">
-                <table id="placement-overview-table">
-                    <tr>
-                        <th>Placement Overview</th>
-                        <th>Corporate Visits</th>
-                        <th>Average Package of B.Tech</th>
-                        <th>Dream Internship Stipend</th>
-                        <th>B. Tech Placement (%)</th>
-                    </tr>
-
-                    <tr>
-                        <td>2020-21</td>
-                        <td>110+</td>
-                        <td>INR 6.20 LPA</td>
-                        <td>INR 1.25 LPA</td>
-                        <td>94%</td>
-                    </tr>
-                </table>
-            </div>
-
         </div>
 
     </body>
@@ -93,8 +73,9 @@
                 alert(errorMessage);
             });
         });
-
+    
     
     </script>
+
 
 </html>
