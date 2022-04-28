@@ -8,16 +8,41 @@ body{
     width: 100vw;
     height: 100vh;
     background-color: #FBEECC;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .root-home{
     width: 100vw;
+    background-color: #FBEECC;
+}
+
+.root-index{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
     height: 100vh;
     background-color: #FBEECC;
 }
+
+.footer{
+    height: 10vh;
+    width: 100%;
+    background-color: black;
+    margin-top: 100px;
+}
+
+/* --------------------- FRONT PAGE STARTS -------------------- */
+
+#front-login-btn{
+    background-color: green;
+    border-color: green;
+    margin-left: 52vw;
+    font-weight: 900;
+    border-radius: 10px;
+}
+
+/* --------------------- FRONT PAGE ENDS -------------------- */
+
 
 /* -------------------- LOGIN PAGE STARTS---------------------*/
 
@@ -108,6 +133,10 @@ body{
 /* -------------------- NAV BAR STARTS ---------------------*/
 .navbar{
     background-color: #f0c687;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+
 }
 
 .navbar ul{
@@ -153,12 +182,13 @@ body{
 /* -------------------- PLACEMENT STATS STARTS ---------------------*/
 
 #placement-chart-img{
-    height: 58%;
+    height: 54%;
     width: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 
 #placement-chart-img img{
@@ -168,12 +198,17 @@ body{
 
 #placement-overview-div{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 #placement-overview-table{
     border-collapse: collapse;
+    font-size: 1vw;
+    width: 64%;
+    table-layout: fixed;
 }
 
 #placement-overview-table table, th, td{
@@ -181,6 +216,22 @@ body{
     text-align: center;
     padding: 10px;  
 }
+
+#recruiter-table{
+    border-collapse: collapse;
+    width: 64%;
+    margin-top: 60px;
+    font-size: 1vw;
+    table-layout: fixed;
+}
+
+#recruiter-table table, th, td{
+    border: 2px solid;
+    text-align: center;
+    padding: 10px;  
+    height: 100px;
+}
+
 
 /* -------------------- PLACEMENT STATS ENDS---------------------*/
 /*  */
