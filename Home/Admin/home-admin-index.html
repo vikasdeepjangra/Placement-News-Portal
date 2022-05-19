@@ -4,7 +4,8 @@
         <!-- STYLESHEETS -->    
             <link rel="stylesheet" type="text/css" href="/style.css">
         <!-- JAVASCRIPT -->    
-            <script src="home-user-script.js"></script>
+            <script src="home-admin-script.js"></script>
+            <script src="post-form.js"></script>
         <!-- FAVICON -->    
             <link rel="icon" type="image/x-icon" href="/Assets/muj-logo-nobg.png">
         <!-- FONT FAMILY -->
@@ -19,17 +20,93 @@
             <div class="navbar">
                 <ul>
                     <li><a href="#" class="active-link">Home</a></li>
-                    <li><a href="/Placement_Stats/placement-stat-index.html">Placement Stats</a></li>
-                    <li><a href="/Contact Us/contact-us-index.html">Contact Us</a></li>
-                    <li><><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" fill="black" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                    <li><a href="/Home/Admin/Placement_Stats_Admin/placement-stat-admin-index.html">Placement Stats</a></li>
+                    <li><a href="/Home/Admin/Contact_Us_Admin/contact-us-admin-index.html">Contact Us</a></li>
+                    <li><button onClick="ShowPostForm()" id="add-job-posting-btn"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" fill="black" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-                      </svg></li>
+                      </svg></button></li>
                     <li><button id="logout-btn">LOGOUT</button></li>
 
                 </ul>   
+            </div>
+
+            <div id="new-post-form-area">
+                <form id="new-post-form">
+                    <label name="company-name-label" id="company-name-label" for="company-name">Company Name</label><br>
+                    <input name="company-name" id="company-name" type="text" placeholder="Company Name">
+                    <br>
+                    <label name="job-description-label" id="job-description-label" for="email">Job Description</label><br>
+                    <textarea rows = "5" cols = "30" name = "description">Enter Job Description Here.</textarea>
+                    <br>
+                    <br>
+                    <button id="post-btn" type="submit">POST</button>
+                    <button id="close-btn" onClick="HidePostForm()">CLOSE</button>
+                </form>
+            </div>
+
+            <div id="job-post-area">
+                
+                <div id="job-post-cards-area">
+
+                    <div class="job-card">
+                        <div class="company-name">COMPANY 1</div>
+                        <div class="job-description">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                        </div>
+                        <div class="apply-btn-div">
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="company-name">COMPANY 2</div>
+                        <div class="job-description">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                        </div>
+                        <div class="apply-btn-div">
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="company-name">COMPANY 3</div>
+                        <div class="job-description">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                        </div>
+                        <div class="apply-btn-div">
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+                    
+                    <div class="job-card">
+                        <div class="company-name">COMPANY 4</div>
+                        <div class="job-description">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                        </div>
+                        <div class="apply-btn-div">
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="job-card">
+                        <div class="company-name">COMPANY 5</div>
+                        <div class="job-description">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                        </div>
+                        <div class="apply-btn-div">
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+            
+                </div>
 
             </div>
-        </div>
+
+            <div class="footer">
+                ©Manipal University, Jaipur, Dehmi Kalan, Near GVK Toll Plaza, Jaipur-Ajmer Expressway, Jaipur, Rajasthan 303007.
+            </div>
+
+        </div>   
 
     </body>
 
